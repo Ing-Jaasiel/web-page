@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Jaasiel Sánchez - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <div class="logo-container">
+            </div>
+        <h1>Redes Infinitas</h1>
+    
+    </header>
+
+<div class="navbar">
+<a href="../index.html#inicio">Inicio</a>
+<a href="../index.html#sobre-mi">Sobre Blog</a>
+<a href="../index.html#articulos">Artículos</a>
+<a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+<a href="../index.html#proyectos">Proyectos</a>
+<a href="../index.html#contacto">Bot</a>
+<a href="../index.html#redes-sociales">Sígueme</a>
+    
+    </div>
+
+    <main>
+        <section id="autor" class="section">
+            <h1><span>Sobre el Autor</span></h1>
+            <div class="autor-info">
+                <img src="../img/Perfil.jpg" alt="Foto de Jaasiel Sanchez" style="width: 100px; border-radius: 50%; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
+                <p>¡Hola! Soy Jaasiel Sánchez,</p>
+                <p>Ingeniero en sistemas computacionales, apasionado por el mundo de las redes y las tecnologías de la información.</p>
+                <p>He creado Redes Infinitas con el objetivo de compartir conocimientos y hacer que temas técnicos se vuelvan fáciles de entender para todos. Me especializo en soluciones de conectividad y seguridad, desde la instalación de redes cableadas e inalámbricas, hasta la implementación de cámaras de seguridad y fibra óptica de alto rendimiento.</p>
+                <p>Mi enfoque es práctico y directo, basado en la experiencia real y siempre buscando su aplicación en el día a día.</p>
+                <p>En Redes Infinitas encontrarás:</p>
+                <ul>
+                    <li>Información esencial</li>
+                    <li>Tips rápidos</li>
+                    <li>Guías técnicas sobre cableado estructurado, fibra óptica, CCTV y conceptos básicos de redes</li>
+                </ul>
+                <p>Mi meta es que puedas comprender y aplicar estos conocimientos, ya seas un principiante curioso o un profesional que busca repasar.</p>
+
+                <h3>Certificaciones y Diplomas</h3>
+                <div class="certificados-miniaturas">
+                    <div>
+                        <p><strong>Partners Certificadores Optronics</strong></p>
+                        <img src="../img/certificado.jpg" alt="Certificado Cableado Estructurado y Fibra Óptica" class="miniatura-certificado" onclick="abrirCertificado('../img/certificado.jpg')">
+                
+                    </div>
+                    <div>
+                        <p><strong>Networking Basics Cisco</strong></p>
+                        <img src="../img/certificado net.png" alt="Certificado Networking Basics Cisco" class="miniatura-certificado" onclick="abrirCertificado('../img/certificado net.png')">
+
+                    </div>
+                    <div>
+                        <p><strong>Cámaras de Seguridad</strong></p>
+                        <img src="../img/diploma.jpg" alt="Certificado Fibra Óptica" class="miniatura-certificado" onclick="abrirCertificado('../img/diploma.jpg')">
+                    
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+
+        <div id="modal-certificado" class="modal">
+            <span class="cerrar-modal" onclick="cerrarCertificado()">&times;</span>
+            <img id="imagen-certificado" class="modal-contenido">
+        </div>
+                <p>Gracias por visitar. ¡Explora, aprende y conecta!</p>
+                <div style="clear: both;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+    <script>
+        function abrirCertificado(ruta) {
+            document.getElementById('imagen-certificado').src = ruta;
+            document.getElementById('modal-certificado').style.display = "block";
+        }
+
+        function cerrarCertificado() {
+            document.getElementById('modal-certificado').style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal-certificado')) {
+                document.getElementById('modal-certificado').style.display = "none";
+            }
+        }
+    </script>
+
+    </body>
+</html>

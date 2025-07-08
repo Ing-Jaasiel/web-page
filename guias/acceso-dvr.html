@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo ver un DVR desde el celular usando P2P - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cómo ver un DVR desde el celular usando P2P</h1>
+
+        <div class="logo-container"></div>
+        <h1>Redes Infinitas</h1>
+    </header>
+
+    <div class="navbar">
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#sobre-mi">Sobre Blog</a>
+        <a href="../index.html#articulos">Artículos</a>
+        <a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto">Bot</a>
+        <a href="../index.html#redes-sociales">Sígueme</a>
+    </div>
+
+    <main class="container">
+        <section class="section">
+            <p>¿Quieres ver las cámaras de tu DVR desde tu celular sin configurar IP pública ni puertos? ¡Con P2P es posible! Aquí te muestro cómo hacerlo paso a paso.</p>
+
+            <h2>¿Qué necesitas?</h2>
+            <ul>
+                <li>Un DVR con función P2P (Hikvision, Dahua, HiLook, XMEye, etc.)</li>
+                <li>Conexión a internet en el DVR</li>
+                <li>Tu celular con la app correspondiente instalada</li>
+            </ul>
+
+            <h2>Paso 1: Verifica que el DVR esté conectado a internet</h2>
+            <p>Entra al menú del DVR → Configuración de Red → Estado. Asegúrate de que aparezca:</p>
+            <ul>
+                <li>Dirección IP</li>
+                <li>Puerta de enlace</li>
+                <li>DNS</li>
+                <li><strong>Estado: Conectado</strong></li>
+            </ul>
+
+            <h2>Paso 2: Activa la función P2P en el DVR</h2>
+            <p>Ve a <strong>Red → P2P o Plataforma P2P</strong> y activa la opción. El estado debe decir <strong>“En línea”</strong>. Aquí aparecerá un <strong>número de serie (S/N)</strong> o un <strong>código QR</strong> que usarás en la app móvil.</p>
+
+            <h2>Paso 3: Descarga e instala la app correspondiente</h2>
+            <ul>
+                <li>Para DVR Dahua → <strong>DMSS</strong></li>
+                <li>Para Hikvision → <strong>Hik-Connect</strong></li>
+                <li>Para XMEye → <strong>XMEye Pro</strong></li>
+            </ul>
+            <p>Instala la app desde Play Store o App Store y crea una cuenta con tu correo.</p>
+
+            <h2>Paso 4: Agrega el DVR en la app</h2>
+            <ol>
+                <li>Abre la app y presiona el botón <strong>“+”</strong> para agregar un nuevo dispositivo.</li>
+                <li>Escanea el <strong>código QR</strong> o introduce el <strong>número de serie</strong> manualmente.</li>
+                <li>Introduce el <strong>usuario y contraseña</strong> del DVR.</li>
+                <li>Asigna un nombre como “Casa” o “Negocio”.</li>
+            </ol>
+
+            <h2>Paso 5: Visualiza las cámaras</h2>
+            <p>Una vez agregado, podrás ver los canales en vivo desde cualquier lugar con internet.</p>
+
+            <h2>Consejos adicionales</h2>
+            <ul>
+                <li>Cambia la contraseña por defecto del DVR para más seguridad.</li>
+                <li>Si el estado de P2P aparece como <strong>Desconectado</strong>, revisa la conexión de red.</li>
+                <li>Si el QR no escanea, puedes introducir el número de serie manualmente.</li>
+            </ul>
+
+            <h2>Errores comunes</h2>
+            <ul>
+                <li><strong>“Código inválido”:</strong> QR mal escaneado o DVR sin internet.</li>
+                <li><strong>“Usuario/contraseña incorrectos”:</strong> Verifica las credenciales del DVR.</li>
+                <li><strong>“Estado Offline”:</strong> Revisa el cable de red o la IP.</li>
+            </ul>
+
+            <p>¡Y listo! Con este método podrás monitorear tus cámaras de seguridad desde cualquier parte del mundo de manera rápida y segura.</p>
+
+            <video width="150" height="250" controls>
+    <source src="../videos/P2P.mov" type="video/mp4">
+    <source src="../video/tutorial_P2P.webm" type="video/webm">
+    Tu navegador no soporta la etiqueta de video.
+</video>
+
+            <p><a href="../index.html#guias-tecnicas">Volver a Guías Técnicas</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> Este contenido es orientativo y puede variar según el modelo del DVR o app utilizada.</p>
+    </footer>
+</body>
+</html>

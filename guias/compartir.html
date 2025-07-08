@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Compartir Carpetas en Red desde un Servidor - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Guía para Compartir Carpetas en Red desde un Servidor</h1>
+        <div class="logo-container">
+
+        </div>
+        <h1>Redes Infinitas</h1>
+    </header>
+
+    <div class="navbar">
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#sobre-mi">Sobre Blog</a>
+        <a href="../index.html#articulos">Artículos</a>
+        <a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto">Bot</a>
+        <a href="../index.html#redes-sociales">Sígueme</a>
+    </div>
+
+    <main class="container">
+        <section class="section">
+            <p>Esta guía te mostrará cómo compartir carpetas en red desde un servidor, configurar las opciones necesarias y acceder a ellas desde otra ubicación.</p>
+
+            <h2>PASO 1: Verificar y Compartir Carpetas</h2>
+            <ol>
+                <li>
+                    
+                    <p>En el servidor, identifica las carpetas que deseas compartir.</p>
+                </li>
+                <li>
+                    
+                    <p>Haz clic derecho sobre la carpeta deseada y selecciona Propiedades.</p>
+                </li>
+                <li>
+                
+                    <p>Dirígete a la pestaña "Uso compartido" y haz clic en "Compartir...".
+                    En la ventana "Acceso a la red", selecciona el usuario "Todos (Everyone)" desde el menú desplegable, luego haz clic en "Agregar".
+                    Da clic en "Compartir" y después en "Listo".</p>
+                </li>
+                <li>
+                    
+                    <p>Ahora, haz clic en "Uso compartido avanzado":
+                    Marca la casilla "Compartir esta carpeta".
+                    Haz clic en "Permisos" y selecciona "Control total", según el nivel de acceso que desees (lectura y escritura o solo lectura).
+                    Haz clic en "Aplicar" y luego en "Aceptar" en ambas ventanas.</p>
+                    <p class="nota"><sup>*</sup> Resultado: La carpeta ya está compartida correctamente en la red.</p>
+                </li>
+            </ol>
+
+            <h2>PASO 2: Configurar Opciones de Red y Firewall</h2>
+            <ol>
+                <li>
+                
+                    <p>Ve a Configuración > Red e Internet > Configuración avanzada de red.
+                    Accede a Configuración de uso compartido.
+                    Asegúrate de activar todas las opciones en el perfil actual:
+                    <ul>
+                        <li>Activar la detección de redes. </li>
+                        <li>Activar el uso compartido de archivos e impresoras. </li>
+                        <li>Activar el uso compartido de carpetas públicas (en "Todas las redes"). </li>
+                    </ul>
+                </li>
+                <li>
+                
+                    <p>Abre el Panel de control > Sistema y seguridad > Firewall de Windows Defender.
+                    Haz clic en "Permitir una aplicación a través del Firewall".
+                    Habilita todas las aplicaciones necesarias.(Después podrás deshabilitar algunas por seguridad si se utiliza VPN.)</p>
+                    <p class="nota"><sup>*</sup> Resultado: El servidor ya está preparado para compartir archivos por red.</p>
+                </li>
+            </ol>
+
+            <h2>PASO 3: Obtener la IP Privada del Servidor</h2>
+            <ol>
+                <li>
+                
+                    <p>Abre la consola de comandos (CMD). </p>
+                </li>
+                <li>
+                
+                    <p>Escribe el comando: <code>ipconfig</code> 
+                    Identifica la dirección IPv4 de tu red local. [cite_start]Por ejemplo: 192.168.0.214.</p>
+                    <p class="nota"><sup>*</sup> Se recomienda asignar una IP fija al servidor para evitar cambios que puedan romper la conexión. </p>
+                </li>
+            </ol>
+
+            <h2>PASO 4: Verificar Ruta de la Carpeta Compartida</h2>
+            <p>La ruta completa para acceder a la carpeta compartida será:
+            <code>\\192.168.0.214\PRUEBA2.2</code> 
+            Donde 192.168.0.214 es la IP del servidor y PRUEBA2.2 el nombre de la carpeta compartida.</p>
+
+            <h2>PASO 5: Conectar la Carpeta como Unidad de Red</h2>
+            <ol>
+                <li>
+                    
+                    <p>Abre el Explorador de archivos.</p>
+                </li>
+                <li>
+                
+                    <p>Haz clic derecho sobre "Red" y selecciona "Conectar a unidad de red...".</p>
+                </li>
+                <li>
+                    
+                    <p>En el campo "Unidad", deja la letra asignada por defecto (o cambia si lo deseas).
+                    En "Carpeta", escribe la ruta: <code>\\192.168.0.214\PRUEBA2.2</code>
+                    Marca la opción "Volver a conectar al iniciar sesión".
+                    Haz clic en "Finalizar".</p>
+                </li>
+                <li>
+                
+                    <p>Se abrirá una ventana para ingresar tus credenciales:
+                    <ul>
+                        <li>Usuario: admin</li>
+                        <li>Contraseña: admin</li>
+                    </ul>
+                </li>
+                <li>
+                    
+                    <p>Una vez conectado, se abrirá automáticamente la carpeta compartida.</p>
+                    <p class="nota"><sup>*</sup> Resultado: Ahora puedes acceder al contenido del servidor desde otra red de forma remota (vía VPN, por ejemplo).</p>
+                </li>
+            </ol>
+
+            <p><a href="../index.html#guias-tecnicas">Volver a Guías Técnicas</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+</body>
+</html>

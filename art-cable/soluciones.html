@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución de Problemas Avanzados en Sistemas de Cableado Estructurado - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Solución de Problemas Avanzados en Sistemas de Cableado Estructurado</h1>
+        <hr>
+    </header>
+
+        <div class="navbar">
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#sobre-mi">Sobre Blog</a>
+        <a href="../index.html#articulos">Artículos</a>
+        <a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto">Bot</a>
+    <a href="../art-cable/art-cableado.html">Art-Cableado</a>
+    </div>
+
+    <main>
+        <section class="section">
+            <h2>Problemas Comunes y su Diagnóstico Avanzado</h2>
+
+            <div class="problema-cableado">
+                <h3>Problemas de Rendimiento Lento o Intermitente</h3>
+                <p><strong>Descripción:</strong> Los usuarios experimentan velocidades de red lentas, transferencias de archivos interrumpidas o conexiones que caen y se restablecen de forma intermitente.</p>
+                <p><strong>Diagnóstico Avanzado:</strong></p>
+                <ul>
+                    <li><strong>Análisis de Atenuación y Pérdida de Retorno:</strong> Utilizar un certificador de cableado para verificar si la pérdida de señal y las reflexiones están dentro de los límites aceptables para la categoría del cable.</li>
+                    <li><strong>Pruebas de Diafonía Avanzadas (PSNEXT, PSACR):</strong> Evaluar la interferencia total entre todos los pares de hilos para identificar si la diafonía acumulativa está afectando el rendimiento.</li>
+                    <li><strong>Análisis de Jitter y Retardo:</strong> En redes sensibles al tiempo (como VoIP), medir la variación en el tiempo de llegada de los paquetes (jitter) y el retardo total para identificar problemas en el cableado o las terminaciones.</li>
+                    <li><strong>Diagnóstico de PoE (Power over Ethernet):</strong> Verificar la resistencia del bucle de CC para asegurar una entrega de energía adecuada y estable a los dispositivos PoE.</li>
+                    <li><strong>Análisis de Ruido Externo (EMI/RFI):</strong> Utilizar herramientas especializadas para detectar fuentes de interferencia electromagnética o de radiofrecuencia cercanas al cableado que puedan estar degradando la señal.</li>
+                </ul>
+            </div>
+
+            <div class="problema-cableado">
+                <h3>Problemas de Interferencia (Ruido en la Señal)</h3>
+                <p><strong>Descripción:</strong> La interferencia puede causar errores en la transmisión de datos, pérdida de paquetes y un rendimiento general deficiente.</p>
+                <p><strong>Diagnóstico Avanzado:</strong></p>
+                <ul>
+                    <li><strong>Análisis de Espectro:</strong> Utilizar analizadores de espectro para identificar las frecuencias y la intensidad de las señales de interferencia.</li>
+                    <li><strong>Blindaje y Puesta a Tierra:</strong> Verificar la integridad del blindaje de los cables STP (si se utilizan) y la correcta conexión a tierra de los equipos y los sistemas de cableado.</li>
+                    <li><strong>Rutas de Cableado:</strong> Inspeccionar las rutas del cableado para asegurar que estén lejos de fuentes conocidas de interferencia, como líneas eléctricas de alto voltaje, motores o equipos industriales.</li>
+                    <li><strong>Terminaciones y Conectores:</strong> Revisar la calidad de las terminaciones y los conectores, asegurándose de que no haya conexiones sueltas o dañadas que puedan actuar como antenas y captar interferencia.</li>
+                    <li><strong>Pruebas de Modo Común y Modo Diferencial:</strong> Realizar pruebas específicas para identificar si la interferencia está entrando en modo común (afectando a todos los hilos por igual) o en modo diferencial (afectando a pares específicos).</li>
+                </ul>
+            </div>
+
+            <div class="problema-cableado">
+                <h3>Fallos en la Conexión (Pérdida Total de Conectividad)</h3>
+                <p><strong>Descripción:</strong> Un enlace de red deja de funcionar por completo.</p>
+                <p><strong>Diagnóstico Avanzado:</strong></p>
+                <ul>
+                    <li><strong>Reflectometría en el Dominio del Tiempo (TDR):</strong> Utilizar un TDR para enviar un pulso eléctrico a lo largo del cable y analizar las reflexiones para identificar la ubicación exacta de roturas, cortocircuitos o problemas de impedancia.</li>
+                    <li><strong>Inspección Visual Detallada:</strong> Examinar cuidadosamente los cables, conectores y patch panels en busca de daños físicos, dobleces excesivos, conectores sueltos o pines doblados.</li>
+                    <li><strong>Pruebas de Continuidad y Mapa de Cableado Extensivas:</strong> Realizar pruebas de continuidad en cada hilo individualmente y un mapa de cableado completo para identificar cualquier circuito abierto, cortocircuito o conexión incorrecta que pueda haber pasado desapercibida en pruebas básicas.</li>
+                    <li><strong>Pruebas de Aislamiento:</strong> En casos donde se sospecha un daño en el aislamiento del cable, realizar pruebas de resistencia de aislamiento para verificar si hay fugas de corriente entre los conductores.</li>
+                    <li><strong>Sustitución de Componentes:</strong> Reemplazar temporalmente cables de conexión (patch cords), conectores o incluso tramos de cableado horizontal sospechosos para aislar el problema.</li>
+                </ul>
+            </div>
+
+            <h2>Herramientas Especializadas para el Diagnóstico Avanzado</h2>
+            <p>El diagnóstico avanzado de problemas en sistemas de cableado estructurado a menudo requiere el uso de herramientas especializadas como:</p>
+            <ul>
+                <li><strong>Certificadores de Cableado Avanzados:</strong> Realizan una amplia gama de pruebas de rendimiento más allá de las pruebas básicas.</li>
+                <li><strong>Analizadores de Espectro:</strong> Identifican y miden las señales de interferencia electromagnética y de radiofrecuencia.</li>
+                <li><strong>Reflectómetros en el Dominio del Tiempo (TDR):</strong> Localizan fallos e irregularidades a lo largo de un cable.</li>
+                <li><strong>Osciloscopios:</strong> Permiten visualizar las señales eléctricas y detectar anomalías.</li>
+                <li><strong>Herramientas de Diagnóstico de Red:</strong> Analizadores de protocolos, sniffers de paquetes para identificar problemas en la capa de red que podrían estar relacionados con el cableado.</li>
+            </ul>
+
+            <p class="autor">Autor: Ing. Jaasiel Sanchez</p>
+            <p><a href="../art-cable/art-cableado.html">Volver Atras.</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+
+</body>
+</html>

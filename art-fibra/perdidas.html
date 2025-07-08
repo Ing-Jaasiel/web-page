@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendiendo las Pérdidas en los Enlaces de Fibra Óptica - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Entendiendo las Pérdidas en los Enlaces de Fibra Óptica</h1>
+        <hr>
+    </header>
+
+    <div class="navbar">
+        <a href="../index.html#inicio">Inicio</a>
+        <a href="../index.html#sobre-mi">Sobre Blog</a>
+        <a href="../index.html#articulos">Artículos</a>
+        <a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="../index.html#contacto">Bot</a>
+    <a href="../art-fibra/art-fibra.html">Art-Fibra</a>
+    </div>
+
+    <main>
+        <section class="section">
+            <h2>Introducción: La Degradación Silenciosa de la Luz</h2>
+            <p>Aunque la fibra óptica es un medio de transmisión increíblemente eficiente, la señal de luz que transporta no viaja indefinidamente sin sufrir cierta degradación. Comprender los diferentes tipos de <strong>pérdidas</strong> que pueden ocurrir en un <strong>enlace de fibra óptica</strong> es crucial para diseñar, instalar y mantener sistemas de comunicación de alto rendimiento. Las principales categorías de pérdidas son la <strong>atenuación</strong>, la <strong>dispersión</strong> y las <strong>pérdidas de conexión</strong>.</p>
+        </section>
+
+        <section class="section">
+            <h3>Atenuación: La Pérdida de Intensidad con la Distancia</h3>
+            <p>La <strong>atenuación</strong>, también conocida como pérdida de inserción o pérdida de fibra, se refiere a la disminución de la potencia de la señal óptica a medida que viaja a través de la fibra. Se mide en decibelios por kilómetro (dB/km) y es un factor inherente al medio de transmisión.</p>
+            <ul>
+                <li><strong>Absorción:</strong> Parte de la luz es absorbida por los materiales que componen la fibra (impurezas en el vidrio o plástico).</li>
+                <li><strong>Dispersión Rayleigh:</strong> Causada por las fluctuaciones microscópicas en la densidad del vidrio, que dispersan la luz en todas direcciones. Esta dispersión es más significativa a longitudes de onda más cortas.</li>
+                <li><strong>Pérdida por Curvatura (Bending Loss):</strong> Las curvas pronunciadas en el cable de fibra pueden hacer que la luz se escape del núcleo y se pierda en el revestimiento.</li>
+            </ul>
+            <p>La atenuación limita la distancia máxima que una señal puede recorrer sin necesidad de ser amplificada por repetidores.</p>
+        </section>
+
+        <section class="section">
+            <h3>Dispersión: El Ensanchamiento de los Pulsos de Luz</h3>
+            <p>La <strong>dispersión</strong> se refiere al ensanchamiento de los pulsos de luz a medida que viajan a lo largo de la fibra. Esto puede hacer que los pulsos adyacentes se superpongan, dificultando la correcta interpretación de los datos en el extremo receptor. Los dos tipos principales de dispersión son:</p>
+            <ul>
+                <li><strong>Dispersión Cromática:</strong> Ocurre porque diferentes longitudes de onda de luz viajan a velocidades ligeramente diferentes a través de la fibra. Como las fuentes de luz láser no son perfectamente monocromáticas, las diferentes componentes de longitud de onda del pulso llegan en momentos ligeramente distintos.
+                    <ul>
+                        <li><strong>Dispersión del Material:</strong> Depende de las propiedades del vidrio de la fibra y varía con la longitud de onda.</li>
+                        <li><strong>Dispersión de la Guía de Ondas:</strong> Ocurre debido a la estructura de la fibra (núcleo y revestimiento) y también depende de la longitud de onda.</li>
+                    </ul>
+                </li>
+                <li><strong>Dispersión Modal (solo en fibra multimodo):</strong> En la fibra multimodo, los diferentes modos de luz viajan por caminos de diferente longitud a través del núcleo más ancho, lo que hace que lleguen al extremo receptor en momentos distintos, ensanchando el pulso. Este es el factor limitante principal de la distancia y el ancho de banda en la fibra multimodo.</li>
+            </ul>
+            <p>La dispersión limita la velocidad máxima de transmisión de datos que se puede lograr en una determinada distancia.</p>
+        </section>
+
+        <section class="section">
+            <h3>Pérdidas de Conexión: El Desafío de la Interrupción</h3>
+            <p>Las <strong>pérdidas de conexión</strong> ocurren en los puntos donde se unen dos fibras ópticas, ya sea a través de conectores o empalmes. Estas pérdidas se deben a imperfecciones en la alineación de los núcleos de las fibras y a la calidad de la conexión.</p>
+            <ul>
+                <li><strong>Pérdida por Desalineación Lateral (Lateral Misalignment):</strong> Los núcleos de las dos fibras no están perfectamente alineados lateralmente.</li>
+                <li><strong>Pérdida por Desalineación Angular (Angular Misalignment):</strong> Los extremos de las dos fibras no están perfectamente perpendiculares al eje de la fibra.</li>
+                <li><strong>Pérdida por Desalineación Longitudinal (Longitudinal Misalignment o Gap Loss):</strong> Existe un espacio entre los extremos de las dos fibras.</li>
+                <li><strong>Pérdida por Desajuste de Fibras (Fiber Mismatch):</strong> Las dos fibras que se conectan tienen diámetros de núcleo ligeramente diferentes.</li>
+                <li><strong>Pérdida por Reflexión de Fresnel:</strong> Ocurre cuando la luz pasa de un medio con un índice de refracción a otro (por ejemplo, del vidrio al aire en un conector sucio o dañado), causando una pequeña reflexión de la luz.</li>
+                <li><strong>Pérdida por Suciedad o Daños en los Conectores:</strong> El polvo, la suciedad o los arañazos en las caras de los conectores pueden bloquear o dispersar la luz.</li>
+            </ul>
+            <p>Minimizar las pérdidas de conexión es fundamental para mantener la integridad de la señal en todo el enlace.</p>
+        </section>
+
+        <section class="section">
+            <h2>Conclusión: Gestionando las Pérdidas para un Rendimiento Óptimo</h2>
+            <p>Comprender los diferentes tipos de pérdidas en los enlaces de fibra óptica es esencial para los profesionales de redes. Al seleccionar los componentes adecuados, instalar el cableado correctamente, realizar terminaciones y empalmes de alta calidad y mantener las conexiones limpias, se pueden minimizar estas pérdidas y garantizar un rendimiento óptimo de los sistemas de comunicación de fibra óptica, permitiendo transmisiones de datos rápidas y confiables a largas distancias.</p>
+        </section>
+
+        <p class="autor">Autor: Ing. Jaasiel Sanchez</p>
+        <p><a href="../art-fibra/art-fibra.html">Volver Atras.</a></p>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+
+</body>
+</html>

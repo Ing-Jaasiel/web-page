@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario Básico de Términos de Cableado Estructurado - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container"></div>
+        <h1>Glosario Básico de Términos de Cableado Estructurado</h1>
+
+    
+    </header>
+    <div class="navbar">
+<a href="../index.html#inicio">Inicio</a>
+<a href="../index.html#sobre-mi">Sobre Blog</a>
+<a href="../index.html#articulos">Artículos</a>
+<a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+<a href="../index.html#proyectos">Proyectos</a>
+<a href="../index.html#contacto">Bot</a>
+<a href="../art-cable/art-cableado.html">Art-Cableado</a>
+    
+    </div>
+
+    <main>
+        <section class="section">
+            <h2>Términos Fundamentales</h2>
+
+            <div>
+                <h3>Cable UTP (Unshielded Twisted Pair - Par Trenzado No Apantallado)</h3>
+                <p>Es un tipo de cable de par trenzado donde los pares de hilos de cobre están trenzados entre sí para ayudar a reducir la interferencia electromagnética (EMI) y la diafonía (crosstalk).</p>
+                <p>No cuenta con un blindaje metálico adicional alrededor de los pares o del cable en general.</p>
+                <p>Es el tipo de cable más comúnmente utilizado en redes Ethernet para cortas y medianas distancias en entornos de oficina y domésticos debido a su costo relativamente bajo y facilidad de instalación.</p>
+                <p>Se clasifica por categorías (Cat 5e, Cat 6, Cat 6a, etc.) que especifican su rendimiento en términos de ancho de banda y velocidad de transmisión.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Cable STP (Shielded Twisted Pair - Par Trenzado Apantallado/Blindado)</h3>
+                <p>Similar al UTP, pero con una capa de blindaje metálico (lámina o malla) que envuelve los pares de hilos individualmente o el cable completo.</p>
+                <p>Este blindaje proporciona una mayor protección contra la interferencia electromagnética (EMI) y la radiofrecuencia (RFI), lo que lo hace adecuado para entornos con altos niveles de ruido eléctrico o para instalaciones que requieren mayor seguridad y rendimiento en distancias más largas.</p>
+                <p>Suele ser más caro y más difícil de instalar que el UTP debido a la necesidad de una correcta conexión a tierra del blindaje.</p>
+                <p>También se clasifica por categorías (Cat 5e, Cat 6, Cat 6a, etc.) con designaciones adicionales que indican el tipo de blindaje (por ejemplo, F/UTP, S/FTP).</p>
+            </div>
+            <br>
+            <div>
+                <h3>Conector RJ45 (Registered Jack 45)</h3>
+                <p>Es un conector modular de 8 posiciones y 8 contactos (8P8C) utilizado comúnmente para terminar cables de par trenzado (UTP y STP) en redes Ethernet.</p>
+                <p>Se utiliza para conectar computadoras, switches, routers y otros dispositivos de red.</p>
+                <p>Los cables UTP y STP se crimpan en estos conectores siguiendo un estándar de cableado específico (T568A o T568B) que define el orden de los hilos dentro del conector.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Patch Panel (Panel de Parcheo)</h3>
+                <p>Es un dispositivo montado en un rack que cuenta con una serie de puertos RJ45 en la parte frontal y bloques de conexión en la parte posterior.</p>
+                <p>Se utiliza como un punto centralizado para terminar los cables horizontales que provienen de los diferentes puntos de conexión (rosetas) en un edificio.</p>
+                <p>Permite una gestión flexible y organizada de las conexiones de red mediante el uso de cables de conexión cortos (patch cords) para interconectar los puertos del patch panel con los puertos de los equipos activos (switches, routers).</p>
+                <p>Facilita la identificación, la resolución de problemas y la realización de cambios en la red sin necesidad de manipular directamente los cables instalados en las paredes o el techo.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Roseta (Outlet/Wall Plate)</h3>
+                <p>Es el punto de conexión visible en la pared o en el suelo donde se termina el cableado horizontal.</p>
+                <p>Generalmente cuenta con uno o varios puertos RJ45 hembra para conectar dispositivos finales (computadoras, teléfonos IP, etc.) mediante un cable de conexión (patch cord).</p>
+            </div>
+            <br>
+            <div>
+                <h3>Cable de Conexión (Patch Cord/Latiguillo)</h3>
+                <p>Es un cable corto de par trenzado (UTP o STP) con conectores RJ45 en ambos extremos.</p>
+                <p>Se utiliza para realizar las conexiones entre los puertos del patch panel y los equipos activos, o entre los puertos de la roseta y los dispositivos finales.</p>
+                <p>Vienen en diferentes longitudes y colores para facilitar la identificación y la organización de las conexiones.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Rack de Telecomunicaciones (Telecom Rack/Equipment Rack)</h3>
+                <p>Es una estructura estandarizada diseñada para alojar y organizar equipos de telecomunicaciones y redes, como patch panels, switches, routers, servidores, fuentes de alimentación ininterrumpida (UPS), etc.</p>
+                <p>Vienen en diferentes alturas (medidas en unidades "U", donde 1U = 1.75 pulgadas) y anchos estándar (19 pulgadas).</p>
+                <p>Ayudan a mantener los equipos organizados, protegidos y facilitan la ventilación y el acceso para el mantenimiento.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Cableado Horizontal</h3>
+                <p>Es la porción del sistema de cableado estructurado que se extiende desde la roseta en el área de trabajo hasta el armario de telecomunicaciones.</p>
+                <p>Generalmente utiliza cable de par trenzado sólido (de núcleo sólido) para minimizar la atenuación en distancias más largas.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Cableado Vertical (Backbone)</h3>
+                <p>Es la porción del sistema de cableado estructurado que proporciona la interconexión entre los armarios de telecomunicaciones, la sala de equipos principal y las salas de entrada de servicios.</p>
+                <p>Puede utilizar cable de par trenzado (de mayor categoría), cable coaxial o fibra óptica, dependiendo de las distancias y los requisitos de ancho de banda.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Armario de Telecomunicaciones (Telecommunications Room/Closet)</h3>
+                <p>Es un espacio dedicado dentro de un edificio donde se terminan los cables horizontales y verticales, y donde se ubican los patch panels, los equipos de red activos y otros componentes del sistema de cableado estructurado.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Sala de Equipos (Equipment Room)</h3>
+                <p>Es un espacio centralizado más grande que un armario de telecomunicaciones, que alberga equipos de red más complejos, como servidores, routers principales, conmutadores de gran capacidad y otros equipos relacionados con la infraestructura de TI.</p>
+            </div>
+            <br>
+            <div>
+                <h3>Categoría (Category)</h3>
+                <p>Es una clasificación estándar para los cables de par trenzado que especifica su rendimiento en términos de ancho de banda, velocidad de transmisión y otras características eléctricas.</p>
+                <p>Las categorías comunes incluyen Cat 5e, Cat 6, Cat 6a, Cat 7, Cat 7a y Cat 8. Cada categoría soporta diferentes velocidades y frecuencias.</p>
+            </div>
+            <br>
+            <div>
+                <h3>TIA/EIA-568</h3>
+                <p>Es un conjunto de estándares de la Telecommunications Industry Association (TIA) y la Electronic Industries Alliance (EIA) que definen las especificaciones técnicas para los sistemas de cableado estructurado en edificios comerciales.</p>
+                <p>Incluye estándares para el tipo de cable, la longitud máxima, la configuración de los conectores (T568A y T568B) y la topología del sistema.</p>
+
+                <p class="autor">Autor: Ing. Jaasiel Sanchez</p>
+                <p><a href="../art-cable/art-cableado.html">Volver Atras. </a></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+
+</body>
+</html>
