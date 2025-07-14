@@ -18,21 +18,20 @@
     
     </header>
 
-    <nav class="navbar">
-    <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
-    <div class="navbar-links">
-    <a href="#inicio">Inicio</a>
-    <a href="/autor/autor.html">Sobre Autor</a>
-    <a href="#sobre-mi">Sobre Blog</a>
-    <a href="#articulos">Artículos</a>
-    <a href="#guias-tecnicas">Guías Técnicas</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Bot</a>
-    <a href="#redes-sociales">Sígueme</a>
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="document.querySelector('.navbar').classList.toggle('open')">
+    ☰
+</button>
+        <a href="#inicio">Inicio</a>
+        <a href="autor/autor.html">Sobre Autor</a>
+        <a href="#sobre-mi">Sobre Blog</a>
+        <a href="#articulos">Artículos</a>
+        <a href="#guias-tecnicas">Guías Técnicas</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Bot</a>
+        <a href="#redes-sociales">Sígueme</a>
+    
     </div>
-</nav>
-
-
 
     <main>
         <section id="inicio">
@@ -180,13 +179,6 @@
         </div>
         <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
     </footer>
-
-    <script>
-function toggleMenu() {
-    document.querySelector('.navbar-links').classList.toggle('active');
-}
-</script>
-
 
 </body>
 </html>
