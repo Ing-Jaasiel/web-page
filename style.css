@@ -565,3 +565,101 @@ footer .colaboracion-general {
     }
 }
 
+
+/* Estilos para la sección de Herramientas */
+#herramientas-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+#herramientas-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.herramientas-container {
+    display: flex;
+    justify-content: center;
+    /* *** ESTE ES EL VALOR CLAVE PARA LA SEPARACIÓN ENTRE BOTONES *** */
+    gap: 30px; /* Puedes aumentar o disminuir este valor (ej. 20px, 40px) */
+    flex-wrap: wrap; /* Permite que los botones salten a la siguiente línea si no caben */
+}
+
+/* Estilos para centrar el botón individualmente (si es necesario) */
+.centrar-boton {
+    /* No es estrictamente necesario si .herramientas-container usa flexbox,
+       pero ayuda a mantener la consistencia si añades otros elementos no flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px 0; */ /* Puedes quitar este margen si el 'gap' es suficiente */
+}
+
+/* Estilos específicos para el botón de la calculadora/herramienta */
+.boton-herramienta-calculadora {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Puedes añadir un ancho mínimo si quieres que todos los botones tengan un tamaño similar */
+    /* min-width: 200px; */ 
+    /* text-align: center; */ /* Si usas min-width, esto ayuda a centrar el texto */
+    /* justify-content: center; */ /* Si usas display: flex en el a, esto centra el contenido */
+}
+
+.boton-herramienta-calculadora:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.boton-herramienta-calculadora:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para la imagen dentro del botón (si decides usar una) */
+.boton-herramienta-calculadora img {
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+    filter: invert(1);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    #herramientas-section h2 {
+        font-size: 2em;
+    }
+    .boton-herramienta-calculadora {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .herramientas-container {
+        gap: 20px; /* Reducir el espacio entre botones en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .herramientas-container {
+        flex-direction: column; /* Apila los botones en pantallas muy pequeñas */
+        align-items: center; /* Centra los botones apilados */
+        gap: 15px; /* Espacio entre botones apilados */
+    }
+    .boton-herramienta-calculadora {
+        width: 90%; /* Hace que el botón ocupe casi todo el ancho disponible */
+        max-width: 300px; /* Limita el ancho máximo para que no se vea demasiado grande en tabletas */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+}

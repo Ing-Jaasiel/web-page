@@ -1,3 +1,4 @@
 {
-    "background.loop": true
+    "background.loop": true,
+    "liveServer.settings.port": 5501
 }

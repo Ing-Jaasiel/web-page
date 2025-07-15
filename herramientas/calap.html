@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Cobertura WiFi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f2f2f2;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        background: #28a745;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #1e7e34;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+    }
+    small {
+        display: block;
+        margin-top: 10px;
+        color: #555;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>📶 Calculadora de Cobertura WiFi</h2>
+
+    <label>Tipo de Access Point:</label>
+    <select id="tipoAP">
+    <option value="1">Básico (TP-Link, Tenda, etc.)</option>
+    <option value="1.3">Profesional (UniFi, Aruba, Cisco)</option>
+    </select>
+
+    <label>Potencia del Access Point (en dBm):</label>
+    <select id="potencia">
+    <option value="17">17 dBm (baja)</option>
+    <option value="20">20 dBm (media)</option>
+    <option value="23">23 dBm (alta)</option>
+    </select>
+
+    <label>Tipo de construcción:</label>
+    <select id="construccion">
+    <option value="1">Casa (muros ligeros)</option>
+    <option value="0.8">Oficina (tabiques estándar)</option>
+    <option value="0.5">Bodega / Industrial (estructuras pesadas)</option>
+    </select>
+
+    <label>Área total a cubrir (en m²):</label>
+    <input type="number" id="areaTotal" value="200" min="1">
+
+    <button onclick="calcular()">Calcular cobertura WiFi</button>
+
+    <div id="resultado"></div>
+
+    <small>🔍 Nota: Este cálculo es una estimación aproximada. Factores como interferencias, distribución de espacios y obstáculos reales pueden afectar el resultado final.</small>
+
+    <script>
+    function calcular() {
+        const tipoAP = parseFloat(document.getElementById('tipoAP').value);
+        const potencia = parseInt(document.getElementById('potencia').value);
+        const construccion = parseFloat(document.getElementById('construccion').value);
+        const areaTotal = parseFloat(document.getElementById('areaTotal').value);
+
+      // Cálculo base: cobertura aproximada según potencia (23 dBm = 150 m²)
+      let coberturaBase = 150 * (potencia / 23);
+
+      // Aplicar factor por tipo de AP y tipo de construcción
+      let coberturaReal = coberturaBase * tipoAP * construccion;
+
+      // Calcular número de APs necesarios
+        const numeroAPs = Math.ceil(areaTotal / coberturaReal);
+
+        document.getElementById('resultado').innerHTML = 
+        "📡 Cobertura estimada por AP: <strong>" + Math.round(coberturaReal) + " m²</strong><br>" +
+        "🔢 Access Points necesarios: <strong>" + numeroAPs + "</strong>";
+    }
+    </script>
+
+    <p><a href="../index.html#herramientas">Volver a Herramientas</a></p>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>

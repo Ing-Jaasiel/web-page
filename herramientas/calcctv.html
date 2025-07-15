@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Completa CCTV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f2f2f2;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        background: #007BFF;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    #resultado {
+        margin-top: 20px;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+    }
+    small {
+        display: block;
+        margin-top: 10px;
+        color: #555;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>📷 Calculadora Completa de Grabación CCTV</h2>
+
+    <label>Número de cámaras:</label>
+    <input type="number" id="camaras" value="4" min="1">
+
+    <label>Horas de grabación por día:</label>
+    <input type="number" id="horas" value="24" min="1" max="24">
+
+    <label>Resolución:</label>
+    <select id="resolucion">
+    <option value="1.5">720p (1.5 Mbps)</option>
+    <option value="2">1080p (2 Mbps)</option>
+    <option value="4">4MP (4 Mbps)</option>
+    <option value="6">6MP (6 Mbps)</option>
+    <option value="8">4K / 8MP (8 Mbps)</option>
+    </select>
+
+    <label>Compresión:</label>
+    <select id="compresion">
+    <option value="1">H.264</option>
+    <option value="0.5">H.265 (más eficiente)</option>
+    </select>
+
+    <label>
+    <input type="checkbox" id="audio">
+    ¿Graba audio cada cámara? (Agrega 64 Kbps por cámara)
+    </label>
+
+    <label>Días deseados de grabación:</label>
+    <input type="number" id="diasDeseados" value="30" min="1">
+
+    <label>Capacidad de tu disco actual (en GB):</label>
+    <input type="number" id="discoActual" value="1000" min="1">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <small>🔍 Nota: Esta herramienta realiza estimaciones basadas en valores promedio de bitrate y compresión. La duración real puede variar según movimiento, escena, y configuración del equipo.</small>
+
+    <script>
+    function calcular() {
+        const camaras = parseInt(document.getElementById('camaras').value);
+        const horas = parseInt(document.getElementById('horas').value);
+        const bitrate = parseFloat(document.getElementById('resolucion').value);
+        const compresion = parseFloat(document.getElementById('compresion').value);
+        const incluyeAudio = document.getElementById('audio').checked;
+        const diasDeseados = parseInt(document.getElementById('diasDeseados').value);
+        const discoActualGB = parseFloat(document.getElementById('discoActual').value);
+
+        const audioPorCamara = incluyeAudio ? 0.064 : 0;
+        const bitratePorCamara = bitrate + audioPorCamara;
+      const totalBitrate = bitratePorCamara * compresion * camaras; // Mbps total
+
+      const gbPorDia = (totalBitrate * horas * 3600) / 8 / 1024; // GB por día total
+
+      // Cálculo de disco necesario para los días deseados
+      const discoNecesarioGB = gbPorDia * diasDeseados;
+
+      // Cálculo de días que graba con el disco actual
+        const diasConDiscoActual = discoActualGB / gbPorDia;
+
+      // Mostrar resultados
+        document.getElementById('resultado').innerHTML = 
+        "💾 Disco necesario para " + diasDeseados + " días: <strong>" + discoNecesarioGB.toFixed(0) + " GB</strong><br>" +
+        "📅 Días estimados de grabación con tu disco actual: <strong>" + diasConDiscoActual.toFixed(1) + " días</strong>";
+    }
+    </script>
+
+    <p><a href="../index.html#herramientas">Volver a Herramientas</a></p>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+    
+    </footer>
+
+</body>
+</html>
