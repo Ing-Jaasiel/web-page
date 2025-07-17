@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Consumo PoE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #007BFF;
+        font-size: 1.5em;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #resultadoPoE {
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    small {
+        color: #555;
+    }
+    </style>
+</head>
+<body>
+
+<h2>🔌 Calculadora de Consumo de Energía PoE</h2>
+
+<label>Tipo de dispositivo:</label>
+<select id="tipoDispositivo" onchange="asignarConsumoSugerido()">
+    <option value="6">Cámara IP básica (6W)</option>
+    <option value="10">Cámara PTZ pequeña (10W)</option>
+    <option value="20">Cámara PTZ grande (20W)</option>
+    <option value="15">Access Point estándar (15W)</option>
+    <option value="30">Access Point profesional (30W)</option>
+    <option value="manual">Otro (especificar manualmente)</option>
+</select>
+
+<label>Consumo por dispositivo (en Watts):</label>
+<input type="number" id="consumoPorDispositivo" value="6" min="1">
+
+<p><small>
+📊 Valores típicos:<br>
+- Cámara IP básica: 6W<br>
+- Cámara PTZ: 10W a 30W<br>
+- Access Point estándar: 15W<br>
+- Access Point profesional: 25W a 30W
+</small></p>
+
+<label>Número de dispositivos:</label>
+<input type="number" id="cantidadDispositivos" value="4" min="1">
+
+<label>Tipo de switch PoE:</label>
+<select id="tipoSwitch" onchange="asignarPresupuestoSugerido()">
+    <option value="60">Pequeño (4-8 puertos) – 60W</option>
+    <option value="120" selected>Estándar (8-16 puertos) – 120W</option>
+    <option value="250">Profesional (24 puertos) – 250W</option>
+    <option value="370">Profesional grande (48 puertos) – 370W</option>
+    <option value="manual">Otro (especificar manualmente)</option>
+</select>
+
+<label>Presupuesto total PoE del switch (en Watts):</label>
+<input type="number" id="presupuestoPoE" value="120" min="1">
+
+<button onclick="calcularPoE()">Calcular Consumo</button>
+
+<div id="resultadoPoE"></div>
+
+<script>
+    function asignarConsumoSugerido() {
+    const seleccion = document.getElementById('tipoDispositivo').value;
+    const inputConsumo = document.getElementById('consumoPorDispositivo');
+
+    if (seleccion === "manual") {
+        inputConsumo.disabled = false;
+        inputConsumo.value = "";
+        inputConsumo.placeholder = "Ingresa el consumo estimado (Watts)";
+    } else {
+        inputConsumo.value = seleccion;
+        inputConsumo.disabled = true;
+    }
+    }
+
+    function asignarPresupuestoSugerido() {
+    const seleccion = document.getElementById('tipoSwitch').value;
+    const inputPresupuesto = document.getElementById('presupuestoPoE');
+
+    if (seleccion === "manual") {
+        inputPresupuesto.disabled = false;
+        inputPresupuesto.value = "";
+        inputPresupuesto.placeholder = "Ingresa el presupuesto del switch (Watts)";
+    } else {
+        inputPresupuesto.value = seleccion;
+        inputPresupuesto.disabled = true;
+    }
+    }
+
+    function calcularPoE() {
+    const cantidad = parseInt(document.getElementById('cantidadDispositivos').value);
+    const consumoPorDispositivo = parseFloat(document.getElementById('consumoPorDispositivo').value);
+    const presupuestoPoE = parseFloat(document.getElementById('presupuestoPoE').value);
+
+    const consumoTotal = cantidad * consumoPorDispositivo;
+
+    let mensaje = "🔋 Consumo total estimado: <strong>" + consumoTotal.toFixed(1) + " Watts</strong><br>";
+
+    if (consumoTotal > presupuestoPoE) {
+        mensaje += "<span style='color: red; font-weight: bold;'>⚠️ Advertencia: El consumo excede el presupuesto PoE del switch.</span>";
+    } else {
+        mensaje += "<span style='color: green; font-weight: bold;'>✅ El consumo está dentro del presupuesto PoE disponible.</span>";
+    }
+
+    document.getElementById('resultadoPoE').innerHTML = mensaje;
+    }
+</script>
+
+</body>
+</html>
+
