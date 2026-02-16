@@ -520,22 +520,24 @@ footer .colaboracion-general {
     height: 100%;
 }
 
-/* Botón hamburguesa oculto en escritorio */
+/* Botón hamburguesa */
 .navbar-toggle {
     display: none;
-    position: absolute;
-    top: 1.2em;
-    right: 1.2em;
-    background: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--color-secundario);
     border: none;
     font-size: 2em;
     color: #fff;
-    z-index: 101;
+    z-index: 2000;
     cursor: pointer;
+    padding: 5px 10px;
 }
 
 /* Navbar responsiva */
 @media (max-width: 700px) {
+
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -546,20 +548,23 @@ footer .colaboracion-general {
         background: var(--color-secundario);
         height: 100vh;
         width: 100vw;
-        padding-top: 60px;
+        padding-top: 80px;
         gap: 1.5em;
         display: none;
         z-index: 1000;
     }
+
     .navbar.open {
         display: flex;
     }
+
     .navbar a {
         padding: 1em 0;
         font-size: 1.2em;
         width: 100%;
         text-align: center;
     }
+
     .navbar-toggle {
         display: block;
     }
@@ -775,4 +780,86 @@ footer .colaboracion-general {
         width: 15px;
         height: 15px;
     }
+}
+
+.galeria-proyecto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.galeria-proyecto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-proyecto img:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    text-align: left; /* 🔥 mueve las etiquetas a la izquierda */
+    font-weight: 600;
 }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi NanoStation no enlaza – Soluciones paso a paso - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Mi NanoStation no enlaza – Soluciones paso a paso</h1>
+
+    </header>
+
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="document.querySelector('.navbar').classList.toggle('open')">
+    ☰
+</button>
+<a href="../index.html#inicio">Inicio</a>
+<a href="../index.html#sobre-mi">Sobre Blog</a>
+<a href="../index.html#articulos">Artículos</a>
+<a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+<a href="../index.html#proyectos">Proyectos</a>
+<a href="../index.html#contacto">Solución y Herramientas</a>
+<a href="../index.html#redes-sociales">Sígueme</a>
+    
+    </div>
+
+<main class="container">
+    <section class="section">
+    
+<article>
+<p>
+Los equipos NanoStation de Ubiquiti son muy utilizados en enlaces inalámbricos punto a punto para conectar casas, negocios, cámaras de seguridad y redes remotas. 
+Sin embargo, uno de los problemas más comunes es que las antenas no logran enlazar o conectar entre sí. 
+En esta guía te mostramos cómo diagnosticar este problema paso a paso.
+</p>
+
+<h2>1. Verificar la frecuencia</h2>
+
+<p>
+Uno de los errores más frecuentes es que ambos equipos estén configurados en diferentes bandas de frecuencia.
+</p>
+
+<ul>
+<li>2.4 GHz (NanoStation M2)</li>
+<li>5 GHz (NanoStation M5)</li>
+</ul>
+
+<p>
+Ambos dispositivos deben trabajar en la misma banda. 
+También se recomienda evitar frecuencias saturadas.
+</p>
+
+<p>
+Consejo profesional: Utiliza el escaneo de espectro en el sistema airOS para elegir una frecuencia con menor interferencia.
+</p>
+
+<h2>2. Revisar el canal inalámbrico</h2>
+
+<p>
+Aunque ambos equipos estén en la misma banda, el canal también debe coincidir.
+</p>
+
+<p>
+Ejemplo correcto:
+</p>
+
+<ul>
+<li>Antena emisora: 5745 MHz</li>
+<li>Antena receptora: 5745 MHz</li>
+</ul>
+
+<p>
+También revisa el ancho de canal (20 MHz, 40 MHz, etc.).
+</p>
+
+<h2>3. Seguridad inalámbrica</h2>
+
+<p>
+Si el tipo de seguridad o contraseña no coinciden, el enlace no se completará.
+</p>
+
+<ul>
+<li>Usa WPA2-AES</li>
+<li>Contraseña exactamente igual</li>
+<li>Respeta mayúsculas y minúsculas</li>
+</ul>
+
+<p>
+Muchos técnicos pierden horas por este detalle.
+</p>
+
+<h2>4. Alineación de las antenas</h2>
+
+<p>
+Una mala alineación provoca señal baja, enlace inestable o fallas de conexión.
+</p>
+
+<ol>
+<li>Configura una antena como Access Point.</li>
+<li>La otra como Station.</li>
+<li>Observa el nivel de señal RSSI.</li>
+<li>Ajusta lentamente hasta lograr la mejor señal.</li>
+</ol>
+
+<p>
+Nivel recomendado: entre -40 y -60 dBm.
+</p>
+
+<h2>5. Nivel de señal</h2>
+
+<p>
+Si la señal es muy baja, el enlace puede no establecerse o conectarse y desconectarse.
+</p>
+
+<p>
+Revisa:
+</p>
+
+<ul>
+<li>Obstáculos como árboles o edificios</li>
+<li>Distancia excesiva</li>
+<li>Interferencias</li>
+</ul>
+
+<p>
+Si el RSSI es menor a -75 dBm, el enlace será inestable.
+</p>
+
+<h2>6. Firmware actualizado</h2>
+
+<p>
+Actualizar el firmware puede resolver problemas de compatibilidad.
+</p>
+
+<ul>
+<li>Usa la misma versión en ambos equipos</li>
+<li>Reinicia después de actualizar</li>
+<li>Descarga firmware oficial</li>
+</ul>
+
+<h2>Otros puntos importantes</h2>
+
+<ul>
+<li>Región configurada correctamente</li>
+<li>Modo AirMAX activado</li>
+<li>Modo Bridge habilitado</li>
+<li>Direcciones IP en la misma red</li>
+<li>Cableado en buen estado</li>
+</ul>
+
+<h2>Consejos de experto</h2>
+
+<p>
+Como especialista en redes y enlaces inalámbricos, te recomendamos:
+</p>
+
+<ul>
+<li>Realizar pruebas antes de la instalación definitiva</li>
+<li>Evitar interferencias de otras redes</li>
+<li>Usar torres o mástiles para mejor línea de vista</li>
+<li>No usar anchos de canal grandes en zonas saturadas</li>
+<li>Documentar cada enlace</li>
+</ul>
+
+<h2>¿Necesitas ayuda profesional?</h2>
+
+<p>
+Si después de estas pruebas el problema continúa, puede ser necesario realizar un análisis profesional del enlace. 
+Puedes contactarnos para diagnóstico, diseño o instalación de enlaces inalámbricos.
+</p>
+
+
+</article>
+<!--<h2>Video tutorial</h2>
+<p>Si prefieres ver un video explicativo, aquí tienes uno que te guía a través del proceso:</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="" title="Cómo crimpar un conector RJ45 (Estándar T568B)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>-->
+            <p><a href="../solucion/soluciones.html" class="boton-herramienta-calculadora">Volver a Soluciones</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+</body>
+</html>

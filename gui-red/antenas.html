@@ -22,64 +22,129 @@
 <a href="../index.html#articulos">Artículos</a>
 <a href="../index.html#guias-tecnicas">Guías Técnicas</a>
 <a href="../index.html#proyectos">Proyectos</a>
-<a href="../index.html#contacto">Bot</a>
+<a href="../index.html#contacto">Solución y Herramientas</a>
 <a href="../index.html#redes-sociales">Sígueme</a>
     
     </div>
 
 <main class="container">
     <section class="section">
-        <h1>Configuración de Enlace Inalámbrico: Modo Punto de Acceso (AP)</h1>
-        <p class="frase-centro">Guía técnica profesional para la configuración de equipos Ubiquiti Airmax M5.</p>
+    
+<article>
 
-        <h2>Introducción Técnica</h2>
-        <p>El primer paso para un enlace exitoso es configurar la antena que estará conectada directamente al router principal (Internet). Esta antena funcionará como el "servidor" inalámbrico que enviará la señal al punto remoto.</p>
+<h1></h1>
 
-        <div class="container">
-            
-            <div class="container">
-                <h2>1. Acceso y Credenciales de Fábrica</h2>
-                <p>Conecta la antena a tu computadora y asegúrate de estar en el segmento de red <strong>192.168.1.x</strong>. Accede vía navegador a la IP por defecto.</p>
-                <ul class="container">
-                    <li><strong>IP por defecto:</strong> 192.168.1.20</li>
-                    <li><strong>Credenciales:</strong> Usuario: <code>ubnt</code> / Password: <code>ubnt</code></li>
-                    <li><strong>Selección de País:</strong> Es vital elegir el país correcto para cumplir con las regulaciones locales de potencia y frecuencias permitidas.</li>
-                </ul>
-            </div>
+<p>Un <strong>enlace punto a punto (PtP)</strong> permite conectar dos ubicaciones físicas mediante antenas inalámbricas en 5GHz sin necesidad de cableado estructurado o fibra óptica.</p>
 
-            <div class="container">
-                <h2>2. Configuración de Red (Network)</h2>
-                <p>Antes de cambiar los parámetros inalámbricos, debemos asegurar la administración del equipo.</p>
-                <ul class="container">
-                    <li><strong>Network Mode:</strong> Bridge (Puente).</li>
-                    <li><strong>IP Address:</strong> Cambia la IP estática (ej. 192.168.1.25) para evitar conflictos si tienes otros equipos en la misma red.</li>
-                    <li><strong>Gateway:</strong> Coloca la dirección IP de tu router principal.</li>
-                </ul>
-            </div>
+<h2> ¿Para qué sirve un enlace PtP?</h2>
+<ul>
+    <li>Conectar oficinas o sucursales</li>
+    <li>Llevar Internet a sitios remotos</li>
+    <li>Interconectar cámaras de seguridad</li>
+    <li>Crear enlaces entre edificios sin cable</li>
+</ul>
 
-            <div class="container">
-                <h2>3. Parámetros Inalámbricos (Wireless)</h2>
-                <p>Aquí es donde definimos el comportamiento de la antena como emisora de señal.</p>
-                <ul class="container">
-                    <li><strong>Wireless Mode:</strong> Access Point (Punto de Acceso).</li>
-                    <li><strong>WDS (Transparent Bridge Mode):</strong> ¡Activado! Esto es fundamental para que el tráfico de red pase de forma transparente.</li>
-                    <li><strong>SSID:</strong> Define el nombre de tu enlace (Ej: <em>Enlace_Jaasiel_P1</em>).</li>
-                    <li><strong>Channel Width:</strong> Se recomienda 20MHz para máxima estabilidad o 40MHz para mayor velocidad.</li>
-                </ul>
-            </div>
+<h2> Material Necesario</h2>
+<ul>
+    <li>2 radios inalámbricos (NanoStation Loco M2, M2 o Arimax 5)</li>
+    <li>Adaptadores PoE</li>
+    <li>Cables Ethernet Cat5e o Cat6</li>
+    <li>Computadora para configuración</li>
+    <li>Soporte o poste para montaje</li>
+</ul>
 
-            <div class="container">
-                <h2>4. Seguridad y Cifrado</h2>
-                <p>Nunca dejes un enlace abierto. La seguridad inalámbrica protege la integridad de los datos transmitidos.</p>
-                <ul class="container">
-                    <li><strong>Security:</strong> WPA2-AES.</li>
-                    <li><strong>WPA Preshared Key:</strong> Define una contraseña robusta que solo tú conozcas.</li>
-                </ul>
-            </div>
+<h2> Paso 1: Instalación Física</h2>
+<p>Monta ambas antenas en puntos elevados con <strong>línea de vista directa</strong>. Evita obstáculos como árboles o estructuras metálicas.</p>
 
-        </div>
+<h2> Paso 2: Acceso al Equipo</h2>
+<ol>
+    <li>Configura tu PC con IP estática en la red 192.168.1.x</li>
+    <li>Ingresa en el navegador a: <strong>http://192.168.1.20</strong></li>
+</ol>
 
-<p>¡Eso es todo! Con un poco de práctica, crimparás conectores como un profesional. Recuerda, la clave está en el orden de los colores y en un buen crimpado. ¡Inténtalo!</p>
+<h2> Diferencias Según el Firmware (Muy Importante)</h2>
+
+<p>Dependiendo de la versión de firmware instalada en la NanoStation Loco M5, el proceso de acceso inicial puede variar.</p>
+
+<h3> Firmware Antiguo (airOS clásico)</h3>
+<ul>
+    <li>Usuario: <strong>ubnt</strong></li>
+    <li>Contraseña: <strong>ubnt</strong></li>
+    <li>No solicita región al ingresar</li>
+</ul>
+
+<p>Después de ingresar se recomienda cambiar inmediatamente la contraseña por seguridad.</p>
+
+<h3> Firmware Nuevo (Asistente Inicial)</h3>
+<ul>
+    <li>Solicita seleccionar país o región</li>
+    <li>Permite elegir idioma</li>
+    <li>Obliga a crear nuevo usuario y contraseña</li>
+    <li>Se deben aceptar los términos de uso</li>
+</ul>
+
+<p>En este caso no se utiliza ubnt/ubnt, ya que el sistema requiere nuevas credenciales por seguridad.</p>
+
+<h2>⚙️ Configuración del Equipo Emisor (Access Point)</h2>
+
+<p>El equipo emisor será el que genere la señal inalámbrica que el otro dispositivo recibirá.</p>
+
+<h3>Configuración de Red</h3>
+<ul>
+    <li>Modo de red: <strong>Bridge</strong></li>
+    <li>Asignar IP estática (ejemplo 192.168.1.30)</li>
+    <li>Máscara: 255.255.255.0</li>
+    <li>Gateway según tu red</li>
+    <li>DNS recomendado: 8.8.8.8</li>
+</ul>
+
+<h3>Configuración Inalámbrica</h3>
+<ul>
+    <li>Wireless Mode: <strong>Access Point (AP)</strong></li>
+    <li>Crear un <strong>SSID</strong> personalizado</li>
+    <li>Seguridad: <strong>WPA2-AES</strong></li>
+    <li>Seleccionar canal fijo</li>
+    <li>Ancho de canal: 20 o 40 MHz</li>
+</ul>
+
+<hr>
+
+<h2>📡 Configuración del Equipo Receptor (Station)</h2>
+
+<p>El equipo receptor será el encargado de conectarse al Access Point para establecer el enlace punto a punto.</p>
+
+<ul>
+    <li>Wireless Mode: <strong>Station o Client</strong></li>
+    <li>Buscar y seleccionar el SSID configurado en el AP</li>
+    <li>Ingresar la misma contraseña WPA2</li>
+    <li>Configurar IP estática en la misma red</li>
+    <li>Modo de red: <strong>Bridge</strong></li>
+</ul>
+
+<p>Una vez aplicados los cambios, el enlace debería establecerse automáticamente si ambos dispositivos están correctamente alineados y en la misma frecuencia.</p>
+
+
+<h2> Alineación y Pruebas</h2>
+<p>Alinea ambas antenas hasta obtener buena intensidad de señal y realiza pruebas de ping entre extremos.</p>
+
+<h2>Recomendaciones de Seguridad</h2>
+<ul>
+    <li>Cambiar credenciales por defecto</li>
+    <li>Actualizar firmware</li>
+    <li>Usar contraseñas robustas</li>
+    <li>Seleccionar canales poco saturados</li>
+</ul>
+
+<h2>Conclusión</h2>
+<p>Configurar un enlace punto a punto con NanoStation Loco M5, Loco M2, Arimax 5, LiteBeam y PowerBeam es una solución eficiente para extender redes inalámbricas en 2.4GHz y 5GHz de forma estable y profesional.</p>
+
+
+<p> Cualquier radio similares una solución eficiente para extender redes inalámbricas en 5GHz de forma estable y profesional.</p>
+
+<hr>
+
+
+</article>
 <h2>Video tutorial</h2>
 <p>Si prefieres ver un video explicativo, aquí tienes uno que te guía a través del proceso:</p>
         <div class="video-container">

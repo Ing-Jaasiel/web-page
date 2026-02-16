@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable de red conectado pero sin Internet – Soluciones paso a paso - Redes Infinitas</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cable de red conectado pero sin Internet – Soluciones paso a paso</h1>
+
+    </header>
+
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="document.querySelector('.navbar').classList.toggle('open')">
+    ☰
+</button>
+<a href="../index.html#inicio">Inicio</a>
+<a href="../index.html#sobre-mi">Sobre Blog</a>
+<a href="../index.html#articulos">Artículos</a>
+<a href="../index.html#guias-tecnicas">Guías Técnicas</a>
+<a href="../index.html#proyectos">Proyectos</a>
+<a href="../index.html#contacto">Solución y Herramientas</a>
+<a href="../index.html#redes-sociales">Sígueme</a>
+    
+    </div>
+
+<main class="container">
+    <section class="section">
+    
+<article>
+<h1>Cable de red conectado pero sin Internet – Soluciones paso a paso</h1>
+</header>
+
+<section>
+
+<p>
+Uno de los problemas más comunes en redes domésticas y empresariales es que el cable de red está conectado, el equipo detecta la conexión, pero no hay acceso a Internet. 
+Este problema puede ocurrir en computadoras, DVR, servidores, cámaras IP o cualquier dispositivo conectado por cable.
+</p>
+
+<p>
+En esta guía aprenderás a diagnosticar la causa paso a paso como un técnico profesional, desde lo más básico hasta configuraciones avanzadas.
+</p>
+
+<h2>1. Verificar si el cable está bien ponchado</h2>
+
+<p>
+El error más frecuente en instalaciones es un mal conector RJ45. Aunque el equipo detecte el cable, algunos hilos pueden no hacer buen contacto.
+</p>
+
+<p>
+Revisa los siguientes puntos:
+</p>
+
+<ul>
+<li>Que los colores sigan el estándar T568A o T568B.</li>
+<li>Que ambos extremos estén configurados con el mismo estándar.</li>
+<li>Que los cables lleguen completamente hasta el fondo del conector.</li>
+<li>Que no existan pines doblados o flojos.</li>
+<li>Que el conector esté bien crimpado.</li>
+</ul>
+
+<p>
+Consejo profesional: utiliza un probador de cable de red para verificar continuidad. Esta herramienta permite detectar errores rápidamente.
+</p>
+
+<h2>2. Probar con otro cable</h2>
+
+<p>
+Aunque el cable parezca en buen estado, puede tener daños internos por dobleces, humedad o mala calidad.
+</p>
+
+<p>
+Realiza esta prueba:
+</p>
+
+<ul>
+<li>Cambia el cable por uno nuevo o probado.</li>
+<li>Si el problema desaparece, el cable original está defectuoso.</li>
+</ul>
+
+<p>
+Este problema es muy común en instalaciones antiguas o con cables económicos.
+</p>
+
+<h2>3. Verificar la tarjeta de red del equipo</h2>
+
+<p>
+En computadoras o servidores:
+</p>
+
+<ul>
+<li>Revisa que el adaptador de red esté habilitado.</li>
+<li>Actualiza los controladores.</li>
+<li>Desinstala y reinstala el driver si es necesario.</li>
+<li>Prueba otro puerto de red.</li>
+</ul>
+
+<p>
+En DVR, cámaras o switches:
+</p>
+
+<ul>
+<li>Verifica que el LED del puerto esté encendido.</li>
+<li>Revisa que el puerto no esté dañado.</li>
+</ul>
+
+<h2>4. Configuración IP incorrecta</h2>
+
+<p>
+Si la red no está bien configurada, el equipo no tendrá acceso a Internet aunque esté conectado.
+</p>
+
+<p>
+Revisa:
+</p>
+
+<ul>
+<li>Dirección IP.</li>
+<li>Máscara de red.</li>
+<li>Gateway.</li>
+<li>DNS.</li>
+</ul>
+
+<p>
+Puedes probar:
+</p>
+
+<ul>
+<li>Obtener IP automática (DHCP).</li>
+<li>Configurar manualmente según tu red.</li>
+</ul>
+
+<p>
+Ejemplo:
+</p>
+
+<ul>
+<li>IP: 192.168.1.50</li>
+<li>Máscara: 255.255.255.0</li>
+<li>Gateway: 192.168.1.1</li>
+<li>DNS: 8.8.8.8</li>
+</ul>
+
+<h2>5. DHCP desactivado en el router</h2>
+
+<p>
+Si el servidor DHCP está desactivado, los dispositivos no obtendrán dirección IP automáticamente.
+</p>
+
+<p>
+Solución:
+</p>
+
+<ul>
+<li>Accede al router.</li>
+<li>Activa el servicio DHCP.</li>
+<li>Reinicia los dispositivos.</li>
+</ul>
+
+<p>
+Este problema es frecuente en redes configuradas manualmente o empresariales.
+</p>
+
+<h2>6. Problemas en el switch de red</h2>
+
+<p>
+El switch puede estar defectuoso, saturado o mal configurado.
+</p>
+
+<p>
+Pruebas recomendadas:
+</p>
+
+<ul>
+<li>Conectar el equipo directamente al router.</li>
+<li>Cambiar de puerto en el switch.</li>
+<li>Reiniciar el switch.</li>
+<li>Probar con otro switch.</li>
+</ul>
+
+<h2>7. VLAN mal configurada</h2>
+
+<p>
+En redes empresariales, el puerto del switch puede pertenecer a una VLAN que no tenga acceso a Internet.
+</p>
+
+<p>
+Esto provoca:
+</p>
+
+<ul>
+<li>Conexión local sin salida.</li>
+<li>Acceso limitado a recursos.</li>
+</ul>
+
+<p>
+Solución:
+</p>
+
+<ul>
+<li>Revisar la configuración del switch.</li>
+<li>Asignar la VLAN correcta.</li>
+</ul>
+
+<h2>8. Gateway incorrecto</h2>
+
+<p>
+Si el gateway está mal configurado, el equipo no podrá salir a Internet.
+</p>
+
+<p>
+Ejemplo correcto:
+</p>
+
+<ul>
+<li>IP: 192.168.1.20</li>
+<li>Gateway: 192.168.1.1</li>
+</ul>
+
+<h2>9. Firewall o antivirus bloqueando</h2>
+
+<p>
+Algunos antivirus o firewalls pueden bloquear la conexión.
+</p>
+
+<p>
+Prueba:
+</p>
+
+<ul>
+<li>Desactivar temporalmente el firewall.</li>
+<li>Verificar reglas de red.</li>
+</ul>
+
+<h2>10. Reinicio completo de la red</h2>
+
+<p>
+Un reinicio puede solucionar fallas temporales:
+</p>
+
+<ol>
+<li>Apaga el router.</li>
+<li>Apaga el switch.</li>
+<li>Apaga el equipo.</li>
+<li>Enciende primero el router.</li>
+<li>Después el switch.</li>
+<li>Por último el equipo.</li>
+</ol>
+
+<h2>Consejos de experto</h2>
+
+<p>
+Basado en experiencia real en cableado estructurado:
+</p>
+
+<ul>
+<li>Siempre prueba con otro cable.</li>
+<li>Usa herramientas profesionales.</li>
+<li>Documenta direcciones IP.</li>
+<li>Etiqueta el cableado.</li>
+<li>Evita mezclas de estándares.</li>
+<li>Realiza mantenimiento preventivo.</li>
+</ul>
+
+<h2>¿Necesitas ayuda profesional?</h2>
+
+<p>
+Si el problema continúa, puede ser necesario realizar un diagnóstico profesional. 
+Puedes contactarnos para soporte técnico, configuración o instalación de cámaras de seguridad.
+</p>
+
+
+</article>
+<!--<h2>Video tutorial</h2>
+<p>Si prefieres ver un video explicativo, aquí tienes uno que te guía a través del proceso:</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="" title="Cómo crimpar un conector RJ45 (Estándar T568B)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>-->
+            <p><a href="../solucion/soluciones.html" class="boton-herramienta-calculadora">Volver a Soluciones</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
+        </div>
+        <p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>
+    </footer>
+</body>
+</html>
