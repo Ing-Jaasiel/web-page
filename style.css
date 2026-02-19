@@ -319,13 +319,19 @@ footer .colaboracion-general {
     margin-top: 10px;
 }
 
-/* Sección de artículos en 4 columnas en escritorio */
+/* ========================================= */
+/* ⭐ SECCIÓN DE ARTÍCULOS PRINCIPAL (INDEX) */
+/* Grid en escritorio */
+/* ========================================= */
+
 .articulos-por-tema {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 20px;
 }
+
+/* ⭐ TARJETAS DE ARTÍCULOS */
 .tema_articulos {
     background: #f9f9f9;
     padding: 20px;
@@ -334,28 +340,43 @@ footer .colaboracion-general {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-@media (max-width: 1200px) {
-    .articulos-por-tema {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 700px) {
-    .articulos-por-tema {
-        grid-template-columns: 1fr;
-    }
+
+    /* ⭐ Animación y efecto moderno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Sección de artículos en 4 columnas para subcarpetas de artículos */
+/* ⭐ EFECTO HOVER */
+.tema_articulos:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* ========================================= */
+/* ⭐ SECCIÓN DE ARTÍCULOS EN SUBCARPETAS */
+/* Scroll horizontal tipo Netflix */
+/* ========================================= */
+
 .art-cable-por-tema,
 .art-camara-por-tema,
 .art-fibra-por-tema,
 .art-red-por-tema {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
 }
+
+/* ⭐ OCULTAR SCROLL (diseño premium) */
+.art-cable-por-tema::-webkit-scrollbar,
+.art-camara-por-tema::-webkit-scrollbar,
+.art-fibra-por-tema::-webkit-scrollbar,
+.art-red-por-tema::-webkit-scrollbar {
+    display: none;
+}
+
+/* ⭐ TARJETAS DE CADA ARTÍCULO */
 .art-cable-tema,
 .art-camara-tema,
 .art-fibra-tema,
@@ -367,25 +388,88 @@ footer .colaboracion-general {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* ⭐ tamaño para scroll horizontal */
+    min-width: 300px;
+
+    /* ⭐ animaciones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ⭐ animación al aparecer */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 0.6s ease forwards;
 }
+
+/* ⭐ EFECTO HOVER */
+.art-cable-tema:hover,
+.art-camara-tema:hover,
+.art-fibra-tema:hover,
+.art-red-tema:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* ========================================= */
+/* ⭐ IMÁGENES PROFESIONALES */
+/* ========================================= */
+
+.articulos-por-tema img,
+.art-cable-por-tema img,
+.art-camara-por-tema img,
+.art-fibra-por-tema img,
+.art-red-por-tema img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.4s ease;
+}
+
+/* ⭐ zoom moderno */
+.articulos-por-tema img:hover,
+.art-cable-por-tema img:hover,
+.art-camara-por-tema img:hover,
+.art-fibra-por-tema img:hover,
+.art-red-por-tema img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================= */
+/* ⭐ ANIMACIÓN AL APARECER */
+/* ========================================= */
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================= */
+/* ⭐ RESPONSIVE */
+/* ========================================= */
+
+/* ⭐ tablets */
 @media (max-width: 1200px) {
-    .art-cable-por-tema,
-    .art-camara-por-tema,
-    .art-fibra-por-tema,
-    .art-red-por-tema {
+    .articulos-por-tema {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ⭐ celular */
 @media (max-width: 700px) {
-    .art-cable-por-tema,
-    .art-camara-por-tema,
-    .art-fibra-por-tema,
-    .art-red-por-tema {
+    .articulos-por-tema {
         grid-template-columns: 1fr;
     }
 }
 
-/* Responsive */
+
+/* ========================================= */
+/* ⭐ AJUSTES GENERALES DE RESPONSIVE */
+/* ========================================= */
+
 @media (max-width: 900px) {
     main {
         padding: 10px;
@@ -396,22 +480,9 @@ footer .colaboracion-general {
     .galeria-proyectos {
         grid-template-columns: 1fr;
     }
-    .lista-especialidades {
-        grid-template-columns: 1fr;
-    }
-    .imagen-especialidad,
-    .articulos-por-tema img,
-    .lista-especialidades img,
-    .tema-articulos img,
-    .articulo-resumen img,
-    .galeria-proyectos img {
-        max-width: 100%;
-        height: 120px;
-    }
-    #inicio img.imagen {
-        max-width: 90vw;
-    }
 }
+
+/* ⭐ celulares pequeños */
 @media (max-width: 600px) {
     header h1 {
         font-size: 2em;
@@ -419,28 +490,14 @@ footer .colaboracion-general {
     .section h1, .section h2, .titulo-seccion {
         font-size: 1.4em;
     }
-    .navbar {
-        flex-direction: column;
-        gap: 0.5em;
-    }
     .section {
         padding: 12px 2px;
     }
     main {
         padding: 2px;
     }
-    .imagen-especialidad,
-    .articulos-por-tema img,
-    .lista-especialidades img,
-    .tema-articulos img,
-    .articulo-resumen img,
-    .galeria-proyectos img {
-        height: 90px;
-    }
-    #inicio img.imagen {
-        max-width: 98vw;
-    }
 }
+
 
 /* Tamaño de texto para autor y ver más artículos */
 .autor-peq {
@@ -863,3 +920,40 @@ label {
     text-align: left; /* 🔥 mueve las etiquetas a la izquierda */
     font-weight: 600;
 }
+
+/* ******** CONTENEDOR SCROLL ******** */
+.contenedor-scroll {
+    position: relative;
+}
+
+/* ******** SCROLL HORIZONTAL ******** */
+.scroll-horizontal {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding: 10px 40px;
+}
+
+/* BOTONES DEL SLIDER */
+.slider-controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.slider-controles button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.slider-controles button:hover {
+    background: #005bb5;
+}
+
