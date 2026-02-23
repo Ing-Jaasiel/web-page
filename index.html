@@ -16,6 +16,8 @@
         <!--<img src="img/redesinfinitas.png" alt="Redes Infinitas" class="logo-banner">-->
         </div>
         <h1>Redes Infinitas</h1>
+        <h1>Expertos en <span id="elemento-animado"></span></h1>
+    
     
     </header>
 
@@ -33,6 +35,9 @@
         <a href="#contacto">S&H</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#redes-sociales">Asesoría</a>
+        <!--<button id="dark-mode-toggle" style="cursor:pointer; padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">
+    🌙 Dark Mode
+</button>-->
     
     </div>
 
@@ -40,7 +45,10 @@
         <section id="inicio">
             <h2 class="frase-centro">"¡Bienvenidos a Redes Infinitas, donde la conexión no tiene límites!"</h2>
             <p>"Descubre los conceptos básicos de redes, cableado estructurado, fibra óptica y cámaras de seguridad con nosotros. Te ofrecemos información esencial y tips rápidos para que puedas comprender y aplicar estos conocimientos en tu día a día. Aprende a identificar los componentes clave, a realizar instalaciones sencillas y a mantener tu red segura y funcionando correctamente. Ideal para quienes buscan información concisa y práctica." </p>
-            <img src="img/imagen.jpg" alt="imagen" class="imagen">
+            <!--<img src="img/imagen.jpg" alt="imagen" class="imagen">-->
+            <div class="slider-container">
+    <img id="slider-image" src="img/imagen.jpg" alt="Servicios de Redes" class="fade-in">
+</div>
 
         <section id="sobre-mi" class="section">
             <h1><span>Sobre Blog</span></h1>
@@ -244,8 +252,8 @@
                     <label>Correo Electrónico</label>
                     <input type="email" name="email" required>
 
-                    <label>Celular</label>
-                    <input type="tel" name="telefono">
+                    <!---<label>Celular</label>
+                    <input type="tel" name="telefono">-->
 
                     <label>Servicio</label>
                 <select name="servicio">
@@ -275,8 +283,27 @@
         <div class="copyright">
             © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
         </div>
+        
 <!--<p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>-->
     </footer>
 
-</body>
+<!-- Banner cookies al enviar -->
+<div id="cookie-form-banner" class="cookie-form-banner">
+    <p>
+Protegemos tu información. Solo la utilizaremos para contactarte y ayudarte con tu proyecto de redes, WiFi, fibra óptica o CCTV. Nunca compartimos tus datos. Respuesta rápida y sin compromiso.
+    </p>
+
+    <label>
+    <input type="checkbox" id="checkCookies">
+    Acepto la política de privacidad y uso de cookies.
+    </label>
+
+    <button id="btnAceptarCookies">Aceptar y enviar</button>
+</div>
+</div>
+<script src="../js/cookies.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="../js/animaciones.js"></script>
+<!--<script src="../js/dark.js"></script>-->
+<script src="../js/imgen.js"></script>
 </html>
