@@ -1035,7 +1035,7 @@ label {
 }
 
 #elemento-animado {
-    color: #f7f7f8; /* Cambia este código por el color de tu marca */
+    color: #ffffff; /* Cambia este código por el color de tu marca */
     font-weight: bold;
     border-right: 2px solid; /* Esto simula el cursor parpadeante */
 }
@@ -1074,4 +1074,17 @@ body.dark-mode a {
 
 .fade-out {
     opacity: 0;
+}
+
+#header {
+    background-image: url("img/baner-infinito.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.titulo-azul {
+    margin-top: 80px; /* ajusta este valor */
+    display: inline-block;
 }

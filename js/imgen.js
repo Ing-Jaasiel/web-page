@@ -1,7 +1,7 @@
 const imagenElemento = document.getElementById('slider-image');
 const misImagenes = [
-    'img/imagen.jpg', // Cambia esto por la ruta de tu primera foto
-    'img/redesinfinitas.png'  // Cambia esto por la ruta de tu segunda foto
+    'img/imagen.png', // Cambia esto por la ruta de tu primera foto
+    'img/imagen-infi.png'  // Cambia esto por la ruta de tu segunda foto
 ];
 
 let indice = 0;
