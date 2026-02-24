@@ -39,7 +39,14 @@
         <!--<button id="dark-mode-toggle" style="cursor:pointer; padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">
     🌙 Dark Mode
 </button>-->
-    
+    <div class="traductor">
+        <img src="img/es.jpg" onclick="cambiarIdioma('es')">
+        <img src="img/us.jpg" onclick="cambiarIdioma('en')">
+    </div>
+</div>
+
+<div id="google_translate_element" style="display:none;"></div>
+
     </div>
 
     <main>
@@ -307,4 +314,6 @@ Protegemos tu información. Solo la utilizaremos para contactarte y ayudarte con
 <script src="js/animaciones.js"></script>
 <!--<script src="../js/dark.js"></script>-->
 <script src="js/imgen.js"></script>
+<script src="js/traductor.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>
