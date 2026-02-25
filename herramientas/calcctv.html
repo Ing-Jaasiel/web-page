@@ -136,10 +136,12 @@
 <!--<p><a href="../index.html#herramientas" class="boton-herramienta-calculadora">Volver a Herramientas</a></p>-->
 
     <footer>
-        <div class="copyright">
-            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
-        </div>
-    
+    <div class="copyright">
+    © <span id="year"></span> Ing. Jaasiel Flores / Redes Infinitas. Todos los derechos reservados.
+    </div>
+    <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
     </footer>
 
 </body>

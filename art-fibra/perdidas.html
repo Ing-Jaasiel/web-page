@@ -27,6 +27,16 @@
         <a href="#redes-sociales">Asesoría</a>
     </div>
 
+    <div class="traductor">
+        <img src="../img/es.jpg" onclick="cambiarIdioma('es')">
+        <img src="../img/us.jpg" onclick="cambiarIdioma('en')">
+    </div>
+
+
+<div id="google_translate_element" style="display:none;"></div>
+
+    </div>
+
     <main>
         <section class="section">
             <h2>Introducción: La Degradación Silenciosa de la Luz</h2>
@@ -83,11 +93,17 @@
     </main>
 
     <footer>
-        <div class="copyright">
-            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
-        </div>
-        <!--<p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>-->
+    <div class="copyright">
+    © <span id="year"></span> Ing. Jaasiel Flores / Redes Infinitas. Todos los derechos reservados.
+    </div>
+        <img src="../img/batman-infinito.png" alt="Redes Infinitas Batman Logo" class="footer-bat-logo">
+    <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
     </footer>
+
+<script src="../js/traductor.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
