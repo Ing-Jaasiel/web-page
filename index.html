@@ -17,7 +17,7 @@
         </div>
         <!--<h1>Redes Infinitas</h1>-->
         
-        <h1><span class="titulo-azul">Expertos en</span> <span id="elemento-animado"></span></h1>
+        <h1><span class="titulo-azul">Especializados en</span> <span id="elemento-animado"></span></h1>
     
     
     </header>
@@ -26,6 +26,7 @@
         <button class="navbar-toggle" onclick="document.querySelector('.navbar').classList.toggle('open')">
     ☰
 </button>
+
 
         <a href="#inicio">Inicio</a>
         <a href="historia/historia.html">Historias</a>
@@ -288,12 +289,17 @@
     </main>
 
     <footer>
-        <div class="copyright">
-            © 2025 Ing. Jaasiel Sanchez / Redes Infinitas. Todos los derechos reservados.
-        </div>
+    <div class="copyright">
+    © <span id="year"></span> Ing. Jaasiel Flores / Redes Infinitas. Todos los derechos reservados.
+    </div>
+        <img src="img/batman-infinito.png" alt="Redes Infinitas Batman Logo" class="footer-bat-logo">
+    <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+    </footer>
         
 <!--<p class="colaboracion-general"><strong>Nota:</strong> El contenido de video presente en este sitio web es resultado de colaboraciones con SatecWeb.</p>-->
-    </footer>
+
 
 <!-- Banner cookies al enviar -->
 <div id="cookie-form-banner" class="cookie-form-banner">

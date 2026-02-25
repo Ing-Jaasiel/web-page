@@ -1112,3 +1112,9 @@ header {
 .traductor img:hover {
     transform: scale(1.1);
 }
+
+.footer-bat-logo {
+    width: 120px;   /* Tamaño estándar recomendado para pie de página */
+    height: auto;    /* Mantiene la proporción para que no se vea estirado */
+    max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+}
